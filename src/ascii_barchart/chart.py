@@ -15,7 +15,6 @@ def scale_bar(value, maximum, width=40):
 
 def render_bar_chart(values):
     console = Console()
-
     maximum = max(value for name, value in values)
 
     for name, value in values:
@@ -28,6 +27,6 @@ def render_bar_chart(values):
             color="green"
         )
 
-        console.print(name, bar)
+        console.print(name, bar, value)
 
 render_bar_chart(values)
